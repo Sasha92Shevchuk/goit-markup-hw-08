@@ -1,15 +1,23 @@
 .section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
   padding-left: auto;
   padding-right: auto;
+  @include desktop {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--title-text-color);
-  @include font(700, 36px, 1.17, null);
+  @include font(700, 28px, 1.18, null);
   text-align: center;
+  @include desktop {
+    margin-bottom: 50px;
+    @include font(700, 36px, 1.17, null);
+  }
 }
 
 .section--no-padding-top {
