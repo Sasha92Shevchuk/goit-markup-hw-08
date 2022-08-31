@@ -1,0 +1,44 @@
+.features {
+  display: flex;
+  column-gap: 30px;
+  &__title {
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+    @include font(700, null, 1.14, null);
+    text-transform: uppercase;
+  }
+  &__item {
+    max-width: 270px;
+  }
+  @extend %list;
+  &__item::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+  }
+  &__icon-antena::before {
+    background-image: url("../img/antena.svg");
+    background-size: 70px;
+  }
+
+  &__icon-clock::before {
+    background-image: url("../img/clock.svg");
+    background-size: 70px;
+  }
+
+  &__icon-diagram::before {
+    background-image: url("../img/diagram.svg");
+    background-size: 70px;
+  }
+
+  &__icon-astronaut::before {
+    background-image: url("../img/astronaut.svg");
+    background-size: 70px;
+  }
+}

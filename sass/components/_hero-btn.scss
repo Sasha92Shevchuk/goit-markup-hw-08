@@ -1,0 +1,8 @@
+.hero__button {
+  min-width: 216px;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: background-color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-timing-function);
+}

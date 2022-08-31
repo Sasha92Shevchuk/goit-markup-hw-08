@@ -1,0 +1,19 @@
+.logo {
+  color: #000000;
+  font-family: "Raleway";
+  @include font(700, 26px, 1.19, null);
+  transition-property: color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+  &__web {
+    color: var(--accent-color);
+  }
+}
+
+.header__logo {
+  margin-right: 93px;
+}

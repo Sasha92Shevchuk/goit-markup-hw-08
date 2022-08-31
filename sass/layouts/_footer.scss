@@ -1,0 +1,84 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #2f303a;
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--accent-white-color);
+    @include font(700, null, 1.14, null);
+
+    text-transform: uppercase;
+  }
+}
+.footer__contacts > .logo {
+  display: block;
+  margin-bottom: 20px;
+  margin-right: 0;
+}
+.logo__studio {
+  color: var(--accent-white-color);
+
+  transition-property: color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+/* .logo-footer:hover,
+.logo-footer:focus {
+  color: var(--accent-color);
+} -  не працює???? */
+
+.address {
+  font-style: normal;
+  &__map-link {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--accent-white-color);
+
+    transition-property: color;
+    transition-duration: var(--animation-duration);
+    transition-timing-function: var(--animation-timing-function);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  &__footer-link {
+    display: block;
+    margin-bottom: 9px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    transition-property: color;
+    transition-duration: var(--animation-duration);
+    transition-timing-function: var(--animation-timing-function);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  &__info {
+    @extend %list;
+  }
+}
+
+.footer > .container {
+  display: flex;
+}
+
+.footer__soc {
+  margin-left: 70px;
+  padding-top: 12px;
+}
+
+.soc__link--footer-fill {
+  background: rgba(255, 255, 255, 0.1);
+  & .soc__icon {
+    fill: #ffffff;
+  }
+}
