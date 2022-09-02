@@ -7,15 +7,38 @@
     margin-bottom: 20px;
     color: var(--accent-white-color);
     @include font(700, null, 1.14, null);
-
     text-transform: uppercase;
+    @include desktop {
+      text-align: left;
+    }
+  }
+  &__soc {
+    text-align: center;
+    @include tablet {
+      padding-top: 5px;
+    }
+    @include desktop {
+      margin-left: 70px;
+      padding-top: 12px;
+    }
   }
 }
-.footer__contacts > .logo {
-  display: block;
-  margin-bottom: 20px;
-  margin-right: 0;
+
+.footer__contacts {
+  text-align: center;
+  & .logo {
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__contacts {
+    margin-left: 61px;
+    margin-right: 165px;
+  }
+}
+
 .logo__studio {
   color: var(--accent-white-color);
 
@@ -28,16 +51,21 @@
   }
 }
 
-/* .logo-footer:hover,
-.logo-footer:focus {
-  color: var(--accent-color);
-} -  не працює???? */
-
 .address {
   font-style: normal;
+  margin-bottom: 60px;
+  @include tablet {
+    margin-bottom: 0;
+  }
+  @include desktop {
+    margin-bottom: 0px;
+  }
   &__map-link {
     display: block;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @include desktop {
+      margin-bottom: 9px;
+    }
     color: var(--accent-white-color);
 
     transition-property: color;
@@ -50,10 +78,11 @@
   }
   &__footer-link {
     display: block;
-    margin-bottom: 9px;
-
+    margin-bottom: 8px;
+    @include desktop {
+      margin-bottom: 9px;
+    }
     color: rgba(255, 255, 255, 0.6);
-
     transition-property: color;
     transition-duration: var(--animation-duration);
     transition-timing-function: var(--animation-timing-function);
@@ -62,19 +91,34 @@
       color: var(--accent-color);
     }
   }
+  &__footer-link--margin {
+    margin-bottom: 0;
+  }
+
   &__info {
     @extend %list;
   }
 }
 
 .footer > .container {
-  display: flex;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @include desktop {
+    display: flex;
+  }
 }
 
-.footer__soc {
-  margin-left: 70px;
-  padding-top: 12px;
-}
+// .container__footer {
+//   @include tablet {
+//     display: flex;
+//     padding-left: 76px;
+//     padding-right: 89px;
+//     justify-content: space-between;
+//   }
+// }
 
 .soc__link--footer-fill {
   background: rgba(255, 255, 255, 0.1);

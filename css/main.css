@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -157,11 +156,27 @@ body {
 
 .btn {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   -moz-column-gap: 8px;
        column-gap: 8px;
+  row-gap: 15px;
   padding: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  margin-right: 11px;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btn {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .btn__portfolio {
@@ -192,11 +207,18 @@ body {
   color: #000000;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   transition-property: color;
   transition-duration: var(--animation-duration);
   transition-timing-function: var(--animation-timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 .logo:hover, .logo:focus {
   color: var(--accent-color);
@@ -496,8 +518,18 @@ body {
 }
 
 @media screen and (max-width: 1199px) {
-  .section--display-none {
-    display: none;
+  .section--visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    margin: -1px;
   }
 }
 
@@ -594,10 +626,20 @@ body {
   justify-content: center;
   gap: 30px;
 }
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 150px) / 6);
+  }
+}
 
 .clients__link {
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -607,6 +649,16 @@ body {
   transition-property: fill, border;
   transition-duration: var(--animation-duration);
   transition-timing-function: var(--animation-timing-function);
+}
+@media screen and (min-width: 768px) {
+  .clients__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    width: 170px;
+  }
 }
 .clients__link:hover, .clients__link:focus {
   fill: var(--accent-color);
@@ -626,13 +678,41 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
 }
+@media screen and (min-width: 1200px) {
+  .footer__title {
+    text-align: left;
+  }
+}
+.footer__soc {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__soc {
+    padding-top: 5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__soc {
+    margin-left: 70px;
+    padding-top: 12px;
+  }
+}
 
-.footer__contacts > .logo {
+.footer__contacts {
+  text-align: center;
+}
+.footer__contacts .logo {
   display: block;
   margin-bottom: 20px;
   margin-right: 0;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__contacts {
+    margin-left: 61px;
+    margin-right: 165px;
+  }
+}
 .logo__studio {
   color: var(--accent-white-color);
   transition-property: color;
@@ -643,42 +723,66 @@ body {
   color: var(--accent-color);
 }
 
-/* .logo-footer:hover,
-.logo-footer:focus {
-  color: var(--accent-color);
-} -  не працює???? */
 .address {
   font-style: normal;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .address {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .address {
+    margin-bottom: 0px;
+  }
 }
 .address__map-link {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   color: var(--accent-white-color);
   transition-property: color;
   transition-duration: var(--animation-duration);
   transition-timing-function: var(--animation-timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .address__map-link {
+    margin-bottom: 9px;
+  }
 }
 .address__map-link:hover, .address__map-link:focus {
   color: var(--accent-color);
 }
 .address__footer-link {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   color: rgba(255, 255, 255, 0.6);
   transition-property: color;
   transition-duration: var(--animation-duration);
   transition-timing-function: var(--animation-timing-function);
 }
+@media screen and (min-width: 1200px) {
+  .address__footer-link {
+    margin-bottom: 9px;
+  }
+}
 .address__footer-link:hover, .address__footer-link:focus {
   color: var(--accent-color);
 }
-.footer > .container {
-  display: flex;
+.address__footer-link--margin {
+  margin-bottom: 0;
 }
-
-.footer__soc {
-  margin-left: 70px;
-  padding-top: 12px;
+@media screen and (min-width: 768px) {
+  .footer > .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer > .container {
+    display: flex;
+  }
 }
 
 .soc__link--footer-fill {
@@ -688,19 +792,42 @@ body {
   fill: #ffffff;
 }
 
-.subscription--position {
-  margin-left: 93px;
-  padding-top: 12px;
-  position: relative;
+.subscription {
+  text-align: center;
+  margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .subscription {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription {
+    margin-left: 70px;
+    padding-top: 12px;
+    margin-top: 0;
+    text-align: center;
+  }
 }
 
-.subscription__form {
-  display: flex;
-  justify-content: center;
+@media screen and (min-width: 1200px) {
+  .subscription--position {
+    margin-left: 93px;
+    padding-top: 12px;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription__form {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .subscription__input-email {
-  width: 358px;
+  width: 100%;
+  margin-bottom: 20px;
   height: 50px;
   background: #2f303a;
   color: rgba(255, 255, 255, 0.6);
@@ -708,6 +835,17 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .subscription__input-email {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription__input-email {
+    width: 358px;
+    margin-bottom: 0px;
+  }
 }
 
 .subscription__icon {
@@ -721,7 +859,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .subscription__button {
+    margin-left: 12px;
+    margin-right: 0;
+  }
 }
 
 .backdrop {
@@ -990,12 +1135,24 @@ body {
   margin-left: calc(-1 * var(--card-ptf));
   margin-top: calc(-1 * var(--card-ptf));
 }
+
 .card-ptf__item {
-  max-width: 370px;
+  width: 100%;
   border: 1px solid #eeeeee;
   margin-left: var(--card-ptf);
   margin-top: var(--card-ptf);
-  flex-basis: calc(33.3333333333% - var(--card-ptf));
+}
+@media screen and (min-width: 768px) {
+  .card-ptf__item {
+    max-width: 370px;
+    flex-basis: calc(50% - var(--card-ptf));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-ptf__item {
+    max-width: 370px;
+    flex-basis: calc(33.3333333333% - var(--card-ptf));
+  }
 }
 
 .card-ptf__link {

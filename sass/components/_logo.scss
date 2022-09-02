@@ -1,7 +1,11 @@
 .logo {
   color: #000000;
   font-family: "Raleway";
-  @include font(700, 26px, 1.19, null);
+  @include font(700, 24px, 1.17, null);
+  @include desktop {
+    @include font(700, 26px, 1.19, null);
+  }
+
   transition-property: color;
   transition-duration: var(--animation-duration);
   transition-timing-function: var(--animation-timing-function);

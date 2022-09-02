@@ -4,19 +4,25 @@
   justify-content: center;
   gap: 30px;
   @extend %list;
-  // &__item {
-  //   @include tablet {
-  //     width: calc((100% - 30px) / 2);
-  //   }
-  //   @include desktop {
-  //     width: calc((100% - 150px) / 6);
-  //   }
-  // }
+  &__item {
+    @include tablet {
+      width: calc((100% - 60px) / 3);
+    }
+    @include desktop {
+      width: calc((100% - 150px) / 6);
+    }
+  }
 }
 
 .clients__link {
   display: flex;
-  width: 170px;
+  width: 210px;
+  @include tablet {
+    width: 226px;
+  }
+  @include desktop {
+    width: 170px;
+  }
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -28,6 +34,7 @@
   transition-property: fill, border;
   transition-duration: var(--animation-duration);
   transition-timing-function: var(--animation-timing-function);
+
   &:hover,
   &:focus {
     fill: var(--accent-color);

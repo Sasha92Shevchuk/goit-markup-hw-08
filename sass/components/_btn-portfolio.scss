@@ -1,9 +1,24 @@
 .btn {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   column-gap: 8px;
+  row-gap: 15px;
   padding: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  margin-right: 11px;
+  @include tablet {
+    justify-content: center;
+    margin-right: 0;
+
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    justify-content: center;
+
+    margin-bottom: 50px;
+  }
+
   @extend %list;
 }
 
