@@ -3,12 +3,28 @@
     border-bottom: 1px solid #ececec;
   }
 }
-
-.navigation {
+.header__container {
   display: flex;
   align-items: center;
 }
+.navigation {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
 
+// @media screen and (max-width: 767px) {
+//   .navigation {
+//     display: none;
+//   }
+// }
+// @media screen and (max-width: 767px) {
+//   .contacts {
+//     display: none;
+//   }
+// }
 .navigation__list {
   display: flex;
   color: var(--title-text-color);
@@ -55,6 +71,9 @@
 }
 
 .contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   display: flex;
   margin-left: auto;
   &__item + .contacts__item {
@@ -78,14 +97,17 @@
   /* background-color: tomato; */
   fill: var(--primary-text-color);
   margin-right: 10px;
-  .contacts-nav .link:hover &,
-  .contacts-nav .link:focus & {
-    color: var(--accent-color);
-    text-decoration: underline;
+  .contacts__link:hover &,
+  .contacts__link:focus & {
     fill: var(--accent-color);
   }
 }
+// Мобільне меню
 
-/* .icon-mail:hover {
-  fill: var(--accent-color);
-} */
+.menu-btn__icon {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
