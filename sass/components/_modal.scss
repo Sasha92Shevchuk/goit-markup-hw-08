@@ -1,7 +1,15 @@
 .modal {
   position: absolute;
-  width: 528px;
-  min-height: 581px;
+  width: 100%;
+  min-height: 609px;
+  @include mobile {
+    width: 450px;
+    min-height: 609px;
+  }
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
+  }
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -16,6 +24,23 @@
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
   }
+  // position: absolute;
+  // width: 528px;
+  // min-height: 581px;
+  // left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%) scale(1);
+  // transition: transform 250ms linear;
+
+  // padding: 40px;
+
+  // background: #ffffff;
+  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  //   0px 2px 1px rgba(0, 0, 0, 0.2);
+  // border-radius: 4px;
+  // .backdrop.is-hidden & {
+  //   transform: translate(-50%, -50%) scale(0);
+  // }
 }
 
 .modal__close-btn {
@@ -42,9 +67,12 @@
 
 .form-modal__title {
   text-align: center;
-  @include font(700, 20px, 1.15, null);
+  @include font(700, 20px, 1.5, null);
   color: #212121;
   margin-bottom: 12px;
+  @include desktop {
+    @include font(null, null, 1.15, null);
+  }
 }
 
 .form-modal__field {
@@ -148,12 +176,28 @@
   border-radius: 2px;
 } */
 .form-modal__text {
-  display: flex;
-  width: 100%;
-  height: 24px;
-  justify-content: center;
-  align-items: center;
-  gap: 7px;
+  display: inline-block;
+  text-align: start;
+  margin-left: 24px;
+  height: 14px;
+  @include font(400, 12px, 1.17, 0.03em);
+  @include desktop {
+    display: flex;
+    width: 100%;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    @include font(400, 14px, 1.71, 0.03em);
+    margin-left: 0;
+  }
+
+  // display: flex;
+  // width: 100%;
+  // height: 24px;
+  // justify-content: center;
+  // align-items: center;
+  // gap: 7px;
   &::before {
     position: absolute;
     top: 50%;
