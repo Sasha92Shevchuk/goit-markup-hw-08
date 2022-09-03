@@ -61,13 +61,67 @@
             >
           </li>
         </ul>
-        <!-- Мобільне меню -->
-        <button type="button" class="menu-btn">
+        <!-- Кнопка виклику мобільного меню -->
+        <button type="button" class="menu-btn-open" data-menu-open>
           <svg class="menu-btn__icon" width="40px" height="40px">
             <use href="./img/icons.svg#icon-btn-menu"></use>
-            <use href="./img/icons.svg#icon-btn-menu-close"></use>
           </svg>
         </button>
+      </div>
+      <!-- Мобільне меню -->
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container-mob">
+          <button type="button" class="menu-btn-close" data-menu-close>
+            <svg class="menu-btn__icon" width="40px" height="40px">
+              <use href="./img/icons.svg#icon-btn-menu-close"></use>
+            </svg>
+          </button>
+          <nav class="mob-menu__navigation">
+            <ul class="mob-menu__list">
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link mob-menu__link--current"
+                  >Студія</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="./portfolio.html" class="mob-menu__link">Портфоліо</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <ul class="mob-contacts">
+              <li class="mob-contacts__item">
+                <a
+                  href="tel:+380961111111"
+                  class="mob-contacts__link mob-contacts__link--color"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contacts__item">
+                <a href="mail:info@devstudio.com" class="mob-contacts__link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-soc">
+              <li class="mob-soc__item">
+                <a href="" class="mob-soc__link link">Instagram</a>
+              </li>
+              <li class="mob-soc__item">
+                <a href="" class="mob-soc__link link">Twitter</a>
+              </li>
+              <li class="mob-soc__item">
+                <a href="" class="mob-soc__link link">Facebook</a>
+              </li>
+              <li class="mob-soc__item">
+                <a href="" class="mob-soc__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -548,5 +602,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
