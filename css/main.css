@@ -6,6 +6,11 @@
   --card-ptf: 30px;
   --animation-duration: 250ms;
   --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --hero-bg-gradient: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
 }
 
 p,
@@ -725,21 +730,36 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-color: #c4c4c4;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-background-mob.jpg);
+  background-image: var(--hero-bg-gradient), url(../img/hero-background-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero--overlay {
+    background-image: var(--hero-bg-gradient), url(../img/hero-background-mob-2x.jpg);
+  }
+}
 @media screen and (min-width: 768px) {
   .hero--overlay {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-background-tabl.jpg);
+    background-image: var(--hero-bg-gradient), url(../img/hero-background-tabl.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero--overlay {
+    background-image: var(--hero-bg-gradient), url(../img/hero-background-tabl-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero--overlay {
     max-width: 1600px;
     height: 600px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-background.jpg);
+    background-image: var(--hero-bg-gradient), url(../img/hero-background.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero--overlay {
+    background-image: var(--hero-bg-gradient), url(../img/hero-background-2x.jpg);
   }
 }
 
