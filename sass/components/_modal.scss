@@ -1,6 +1,6 @@
 .modal {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 30px);
   min-height: 609px;
   @include mobile {
     width: 450px;

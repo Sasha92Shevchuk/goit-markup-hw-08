@@ -1262,7 +1262,7 @@ body {
 
 .modal {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 30px);
   min-height: 609px;
   left: 50%;
   top: 50%;
