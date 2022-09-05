@@ -6,7 +6,7 @@
   }
   @include desktop {
     margin-left: 70px;
-    padding-top: 12px;
+
     margin-top: 0;
     text-align: center;
   }
@@ -14,7 +14,7 @@
 .subscription--position {
   @include desktop {
     margin-left: 93px;
-    padding-top: 12px;
+
     position: relative;
   }
 }

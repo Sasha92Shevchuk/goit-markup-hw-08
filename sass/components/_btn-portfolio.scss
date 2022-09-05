@@ -6,10 +6,10 @@
   row-gap: 15px;
   padding: 0;
   margin-bottom: 40px;
-  margin-right: 11px;
+  // margin-right: 11px;
   @include tablet {
     justify-content: center;
-    margin-right: 0;
+    // margin-right: 0;
 
     margin-bottom: 30px;
   }

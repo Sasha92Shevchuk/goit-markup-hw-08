@@ -8,6 +8,9 @@
 
   background: rgba(0, 0, 0, 0.2);
   transition: visibility 250ms linear, opacity 250ms linear;
+  // @media screen and (max-width: 767px) {
+  //   padding: auto;
+  // }
 }
 
 .is-hidden {

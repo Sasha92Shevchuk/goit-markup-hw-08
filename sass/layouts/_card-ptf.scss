@@ -8,7 +8,7 @@
 }
 .card-ptf__item {
   width: 100%;
-  border: 1px solid #eeeeee;
+
   margin-left: var(--card-ptf);
   margin-top: var(--card-ptf);
   @include tablet {
@@ -23,6 +23,7 @@
 
 .card-ptf__link {
   display: block;
+  height: 100%;
   color: currentColor;
 
   transition-property: box-shadow;
@@ -36,10 +37,12 @@
 }
 
 .card-content {
+  flex-grow: 1;
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
   &__title {
     color: var(--title-text-color);
-    @include font(700, 18px, 2, 0.06);
+    @include font(700, 18px, 2, 0.06em);
   }
   &__text {
     margin-top: 4px;
@@ -49,6 +52,11 @@
   }
 }
 
+.projects {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .card-thumb {
   position: relative;
   overflow: hidden;

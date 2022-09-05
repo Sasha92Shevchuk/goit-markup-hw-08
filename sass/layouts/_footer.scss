@@ -14,28 +14,26 @@
   }
   &__soc {
     text-align: center;
-    @include tablet {
-      padding-top: 5px;
-    }
+
     @include desktop {
       margin-left: 70px;
-      padding-top: 12px;
     }
   }
 }
 
 .footer__contacts {
   text-align: center;
+  margin-bottom: 60px;
+  @include tablet {
+    margin-bottom: 0px;
+  }
+  @include desktop {
+    flex-grow: 1;
+  }
   & .logo {
     display: block;
     margin-bottom: 20px;
     margin-right: 0;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer__contacts {
-    margin-left: 61px;
-    margin-right: 165px;
   }
 }
 
@@ -53,13 +51,7 @@
 
 .address {
   font-style: normal;
-  margin-bottom: 60px;
-  @include tablet {
-    margin-bottom: 0;
-  }
-  @include desktop {
-    margin-bottom: 0px;
-  }
+
   &__map-link {
     display: block;
     margin-bottom: 8px;
@@ -103,11 +95,9 @@
 .footer > .container {
   @include tablet {
     display: flex;
+    align-items: baseline;
     flex-wrap: wrap;
-    justify-content: center;
-  }
-  @include desktop {
-    display: flex;
+    justify-content: space-around;
   }
 }
 
